@@ -1,0 +1,23 @@
+spring:
+  security:
+    oauth2:
+      authorizationserver:
+        client:
+          crm-client:
+            registration:
+              client-id: "crm"
+              client-secret: "{noop}crm"
+              client-authentication-methods:
+                - "client_secret_basic"
+              authorization-grant-types:
+                - "client_credentials"
+                - "authorization_code"
+                - "refresh_token"
+              redirect-uris:
+                - "http://127.0.0.1:9092/login/oauth2/code/spring"
+#              post-logout-redirect-uris:
+#                - "http://127.0.0.1:8080/"
+              scopes:
+                - "openid"
+                - "user.read"
+            require-authorization-consent: true
