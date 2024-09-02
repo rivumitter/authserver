@@ -9,13 +9,13 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 @Configuration
 public class AuthserverConfig {
 
-    @Bean
-    UserDetailsService inmemoryUserDetailsManger() {
-        var userBuilder = User.builder();
-
-        return new InMemoryUserDetailsManager(
-                userBuilder.username("rivu").password("{noop}pwd").build(),
-                userBuilder.username("rima").password("{noop}pwd").build()
-        );
-    }
+//    @Bean
+//    UserDetailsService inmemoryUserDetailsManger() {
+//        var userBuilder = User.builder();
+//
+//        return new InMemoryUserDetailsManager(
+//                userBuilder.username("rivu").password("{noop}pwd").build(),
+//                userBuilder.username("rima").password("{noop}pwd").build()
+//        );
+//    }
 }
